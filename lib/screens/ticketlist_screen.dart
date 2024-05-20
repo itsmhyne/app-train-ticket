@@ -301,7 +301,7 @@ class TicketListScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         vertical: 15, horizontal: 20),
                     decoration: BoxDecoration(
-                        color: secondaryColor,
+                        color: orangeColor,
                         borderRadius: BorderRadius.circular(15)),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,

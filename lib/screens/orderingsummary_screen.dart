@@ -409,7 +409,7 @@ class OrderingSummaryScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: GestureDetector(
-                        onDoubleTap: () {
+                        onTap: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(

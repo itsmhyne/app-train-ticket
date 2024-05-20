@@ -15,8 +15,8 @@ class SeatChooser extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           Column(children: [
-            SizedBox(
-              height: MediaQuery.paddingOf(context).top,
+            const SizedBox(
+              height: 40,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -195,7 +195,7 @@ class SeatChooser extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                   decoration: BoxDecoration(
-                      color: secondaryColor,
+                      color: orangeColor,
                       borderRadius: BorderRadius.circular(15)),
                   child: Text(
                     "SELECT YOUR SEAT",

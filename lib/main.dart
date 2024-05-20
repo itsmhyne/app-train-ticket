@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
           fontFamily: 'PlusJakartaSans'),
       // home: const TicketListScreen(),
       // home: const OrderingSummaryScreen(),
-      // home: const HomeScreen(),
-      home: const SeatChooser(),
+      // home: const SeatChooser(),
+      home: const HomeScreen(),
     );
   }
 }
