@@ -1,10 +1,12 @@
 import 'package:dotted_line/dotted_line.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:slicing_mhyticket/custom/constant.dart';
 import 'package:slicing_mhyticket/custom/data.dart';
 import 'package:slicing_mhyticket/custom/textstyle.dart';
+import 'package:slicing_mhyticket/screens/orderingsummary_screen.dart';
 
 class TicketListScreen extends StatelessWidget {
   const TicketListScreen({super.key});
@@ -36,14 +38,18 @@ class TicketListScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: MediaQuery.paddingOf(context).top,
-                    ),
+                    // SizedBox(
+                    //   height: MediaQuery.paddingOf(context).top,
+                    // ),
                     Container(
                       padding: const EdgeInsets.all(20),
                       child: Row(
                         children: [
-                          const Icon(Icons.arrow_back_rounded),
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: const Icon(Icons.arrow_back_rounded)),
                           const SizedBox(
                             width: 25,
                           ),
@@ -165,7 +171,7 @@ class TicketListScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "CLB",
+                                    "KSB",
                                     style: bodyM(
                                         color: Colors.grey[500],
                                         fontWeight: FontWeight.bold),
@@ -252,15 +258,24 @@ class TicketListScreen extends StatelessWidget {
                                     color: Colors.grey[500],
                                     fontWeight: FontWeight.w600),
                               ),
-                              Container(
-                                padding: const EdgeInsets.all(2),
-                                decoration: BoxDecoration(
-                                    color: Colors.blue[500],
-                                    borderRadius: BorderRadius.circular(5)),
-                                child: SvgPicture.asset(
-                                  'assets/icons/eye_search.svg',
-                                  colorFilter: const ColorFilter.mode(
-                                      Colors.white, BlendMode.srcIn),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              OrderingSummaryScreen()));
+                                },
+                                child: Container(
+                                  padding: const EdgeInsets.all(2),
+                                  decoration: BoxDecoration(
+                                      color: secondaryColor,
+                                      borderRadius: BorderRadius.circular(5)),
+                                  child: SvgPicture.asset(
+                                    'assets/icons/eye_search.svg',
+                                    colorFilter: const ColorFilter.mode(
+                                        Colors.white, BlendMode.srcIn),
+                                  ),
                                 ),
                               ),
                             ],

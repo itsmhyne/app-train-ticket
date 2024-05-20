@@ -1,6 +1,6 @@
-# slicing_mhyticket
+# Slicing Train Ticket Ui Mobile
 
-A new Flutter project.
+develop with ❤ by M. Hamdan Yusuf
 
 ## Getting Started
 

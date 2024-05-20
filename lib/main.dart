@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:slicing_mhyticket/screens/home_screen.dart';
 import 'package:flutter/services.dart';
+import 'package:slicing_mhyticket/screens/orderingsummary_screen.dart';
 import 'package:slicing_mhyticket/screens/ticketlist_screen.dart';
 
 void main() {
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
           fontFamily: 'PlusJakartaSans'),
-      home: const TicketListScreen(),
+      // home: const TicketListScreen(),
+      home: const OrderingSummaryScreen(),
       // home: const HomeScreen(),
     );
   }

@@ -88,7 +88,10 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SvgPicture.asset('assets/icons/transfer.svg'),
+                          SvgPicture.asset(
+                            'assets/icons/data_transfer.svg',
+                            width: 24,
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
@@ -196,7 +199,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Navigator.pop(
+                              Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
@@ -284,7 +287,7 @@ class HomeScreen extends StatelessWidget {
                               Container(
                                 padding: const EdgeInsets.all(2),
                                 decoration: BoxDecoration(
-                                    color: Colors.blue[500],
+                                    color: secondaryColor,
                                     borderRadius: BorderRadius.circular(5)),
                                 child: SvgPicture.asset(
                                   'assets/icons/eye_search.svg',

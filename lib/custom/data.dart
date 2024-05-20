@@ -51,3 +51,10 @@ final List<String> station = [
 ];
 
 final List<String> stationShort = ["KSB", "JKT", "MLG", "BLT"];
+
+final List<String> people = ["Alexander Graham B", "Benzema", "Cristhina B"];
+final List<String> email = [
+  "alexb@example.com",
+  "benz@example.com",
+  "crisb@example.com"
+];
