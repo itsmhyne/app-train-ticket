@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:slicing_mhyticket/custom/constant.dart';
 import 'package:slicing_mhyticket/custom/data.dart';
 import 'package:slicing_mhyticket/custom/textstyle.dart';
+import 'package:slicing_mhyticket/screens/seatchooser_screen.dart';
 
 class OrderingSummaryScreen extends StatelessWidget {
   const OrderingSummaryScreen({super.key});
@@ -341,7 +342,7 @@ class OrderingSummaryScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Row(
                           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -376,7 +377,7 @@ class OrderingSummaryScreen extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: TextField(
                           decoration: InputDecoration(
                               label: Text(
@@ -407,16 +408,24 @@ class OrderingSummaryScreen extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
-                      child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 15),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                        ),
-                        child: Text(
-                          'Pilih Kursi',
-                          textAlign: TextAlign.center,
-                          style: heading7(color: fontColorSecondary),
+                      child: GestureDetector(
+                        onDoubleTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SeatChooser()));
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(vertical: 15),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white,
+                          ),
+                          child: Text(
+                            'Pilih Kursi',
+                            textAlign: TextAlign.center,
+                            style: heading7(color: fontColorSecondary),
+                          ),
                         ),
                       ),
                     ),
@@ -425,7 +434,7 @@ class OrderingSummaryScreen extends StatelessWidget {
                     ),
                     Expanded(
                       child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 15),
+                        padding: const EdgeInsets.symmetric(vertical: 15),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: orangeColor,

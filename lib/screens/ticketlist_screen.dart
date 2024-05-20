@@ -21,7 +21,7 @@ class TicketListScreen extends StatelessWidget {
             fit: BoxFit.cover,
             width: double.infinity,
           ),
-          ListView(
+          Column(
             children: [
               Container(
                 decoration: const BoxDecoration(
@@ -38,9 +38,9 @@ class TicketListScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Column(
                   children: [
-                    // SizedBox(
-                    //   height: MediaQuery.paddingOf(context).top,
-                    // ),
+                    SizedBox(
+                      height: MediaQuery.paddingOf(context).top,
+                    ),
                     Container(
                       padding: const EdgeInsets.all(20),
                       child: Row(
@@ -113,9 +113,6 @@ class TicketListScreen extends StatelessWidget {
                     )
                   ],
                 ),
-              ),
-              const SizedBox(
-                height: 20,
               ),
               Expanded(
                 child: ListView.builder(
@@ -300,15 +297,15 @@ class TicketListScreen extends StatelessWidget {
                             blurRadius: 5.0,
                             offset: Offset(0, 5)),
                       ]),
-                  child: Center(
-                      child: Container(
+                  child: Container(
                     padding: const EdgeInsets.symmetric(
                         vertical: 15, horizontal: 20),
                     decoration: BoxDecoration(
-                        color: orangeColor,
-                        borderRadius: BorderRadius.circular(30)),
+                        color: secondaryColor,
+                        borderRadius: BorderRadius.circular(15)),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Icon(
                           Icons.filter_alt_rounded,
@@ -319,11 +316,11 @@ class TicketListScreen extends StatelessWidget {
                         ),
                         Text(
                           "FILTER",
-                          style: bodyM(color: Colors.white),
+                          style: heading7(color: Colors.white),
                         ),
                       ],
                     ),
-                  )))
+                  ))
             ],
           )
         ],
